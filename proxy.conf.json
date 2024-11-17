@@ -1,0 +1,9 @@
+{
+  "/api": {
+    "target": "https://demo.ix.cimsoweb.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": { "^/api": "" }
+  }
+}
+

@@ -1,0 +1,162 @@
+<section class="top_section flex p-2 py-3 fixed top-0 ">
+    <div class="back_key" routerlink="/products" (click)="goBack()" > 
+        <button type="button" class="bg-slate-200 rounded-3xl p-2  " routerlink="/products">
+            <svg class="w-7 h-7 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12l4-4m-4 4 4 4"/>
+            </svg>
+              
+              
+              
+        </button>
+    </div>
+</section>
+
+<main class="mb-7 mt-24 ">
+    <div class="container px-2">
+        <div class="product grid grid-cols-1 " *ngIf="product">
+            <div class="border w-4/5 mx-auto" >
+                <img class="w-full h-full " src="{{product.image[0]}}" alt="" />
+
+            </div>
+            <div class=" border h-full mt-3 pt-2">
+                <div class="relative h-10 mx-2">
+                    <p class="text-lg ">{{product.name}}</p>
+                </div>
+
+                <div class="relative flex justify-between mx-2 border-b pb-3">
+                    <p class="text-red-500 text-2xl font-bold">R{{product.price}}</p>
+
+
+                    <button type="button" class="border-2 shadow-md rounded-full bg-purple-500 outline-purple-400 absolute z-50 right-5 -top-2 p-2" (click)="addToCart(product)">
+                        <svg class="w-8 h-8 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+                        </svg>
+                          
+                    </button>
+                </div>
+                
+                
+
+                <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
+                    <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-tab" data-tabs-toggle="#default-tab-content" role="tablist">
+                        <li class="me-2" role="presentation">
+                            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:border-blue-600" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Description</button>
+                        </li>
+                        <li class="me-2" role="presentation">
+                            <button class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">Nutritional Info</button>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div id="default-tab-content border-10">
+                    <div class="hidden p-4 rounded-lg  dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <p class="text-sm text-gray-500 dark:text-gray-400">Fair Cape Dairies Long Life UHT Full Cream Milk can be conveniently stored in your grocery cupboard for months, so you need never run out of milk. It's also very convenient for camping trips.</p>
+                    </div>
+                    <div class="hidden p-4 rounded-lg   dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                    </div>
+                    
+                </div>
+
+                
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+<div id="similar-items" class="border mx-2 px-2 mb-20">
+    <div class="my-4">
+        <h1 class="font-bold text-lg">Products you may like</h1>
+    </div>
+
+    <div class="overflow-x-auto py-4 mb-4">
+        <div class=" min-w-max">
+            <div class=" grid grid-cols-4 gap-4">
+                <div class=" bg-slate-100  border-2 border-gray-200  shadow-md rounded-lg w-40 h-56  " routerLink="/product">
+
+                    <div class="w-full border-4 border-white h-36   rounded-b-3xl overflow-hidden rounded-lg   ">
+                        <a [routerLink]="['/product']" routerLinkActive="router-link-active" >
+                            <img class="w-full h-full " src="https://cdn-prd-02.pnp.co.za/sys-master/images/h4e/hb5/11491489710110/silo-product-image-v2-26Sep2024-180138-6001299015205-Straight_on-251327-185_400Wx400H" alt="" />
+                        </a>
+                    </div>
+        
+                    <div class="relative px-2 py-1 ">
+                        <div class="relative h-10 overflow-hidden ">
+                            <p class="text-sm ">Clover UHT Full Cream Long Life Milk 6x1L </p>
+                        </div>
+                        <div class=" relative flex justify-between">
+                            <p class="text-red-500 text-lg font-bold">R98.99</p> 
+                            <button type="button" class="border-2 rounded-full bg-purple-500 outline-purple-400 absolute z-50 -right-4 p-2">
+                                <svg class="w-8 h-8 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+                                </svg>
+                                
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class=" relative bg-slate-100  border-2 border-gray-200  shadow-md rounded-lg w-40 h-56  " routerLink="/product">
+                    <div class="absolute -right-3">
+                        <button class="rounded-lg bg-red-500 text-sm font-semibold px-2 text-white">On Promo</button>
+                    </div>
+
+                    <div class="w-full border-4 border-white h-36   rounded-b-3xl overflow-hidden rounded-lg ">
+                        <a [routerLink]="['/product']" routerLinkActive="router-link-active" >
+                            <img class="w-full h-full " src="https://cdn-prd-02.pnp.co.za/sys-master/images/hd5/h9d/11273068544030/silo-product-image-v2-28Sep2023-180458-6002100140598-Straight_on-177530-1987_400Wx400H" alt="" />
+                        </a>
+                    </div>
+        
+                    <div class="relative px-2 py-1 ">
+                        <div class="relative h-10 overflow-hidden ">
+                            <p class="text-sm ">Parmalat Everfresh Full Cream Long Life Milk 6x1L</p>
+                        </div>
+                        <div class=" relative flex justify-between">
+                            <p class="text-red-500 text-lg font-bold">R78.99 <span class="line-through text-xs text-black">R99.99</span></p> 
+                            <button type="button" class="border-2 rounded-full bg-purple-500 outline-purple-400 absolute z-50 -right-6 p-2">
+                                <svg class="w-8 h-8 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+                                </svg>
+                                
+                            </button>
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class=" bg-slate-100  border-2 border-gray-200  shadow-md rounded-lg w-40 h-56  " routerLink="/product">
+
+                    <div class="w-full border-4 border-white h-36   rounded-b-3xl overflow-hidden rounded-lg  ">
+                        <a [routerLink]="['/product']" routerLinkActive="router-link-active" >
+                            <img class="w-full h-full " src="https://www.shoprite.co.za/medias/10124889EA-checkers515Wx515H.webp?context=bWFzdGVyfGltYWdlc3wyMzY2NHxpbWFnZS93ZWJwfGltYWdlcy9oMzYvaDk4LzEwNjE4OTYwMzc5OTM0LndlYnB8NmNmOWM5MGJmYjhjNTlhOGQwYzQ1MjIyZjVmODY3ZWJkMjE3NGY5M2ExNTI1ZGU4OTY2MzJmYjBmOWJhYjYyMg" alt="" />
+                        </a>
+                    </div>
+        
+                    <div class="relative px-2 py-1 ">
+                        <div class="relative h-10 overflow-hidden ">
+                            <p class="text-sm ">Darling Fresh Full Cream Milk Sachet 1L</p>
+                        </div>
+                        <div class=" relative flex justify-between">
+                            <p class="text-red-500 text-lg font-bold">R13.49 </p> 
+                            <button type="button" class="border-2 rounded-full bg-purple-500 outline-purple-400 absolute z-50 -right-4 p-2">
+                                <svg class="w-8 h-8 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7h-1M8 7h-.688M13 5v4m-2-2h4"/>
+                                </svg>
+                                
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</div>
+<app-footer-nav>

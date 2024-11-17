@@ -1,0 +1,9 @@
+<div class="w-full grid grid-cols-4">
+    <div class="border" *ngFor="let unit of units">
+        <p>{{unit['Unit Type Code']}}</p>
+
+
+        <button type class=" bg-blue" routerLink="/bookings/{{unit['Unit Type ID']}}" routerLinkActive="router-link-active" >Click to view booking</button>
+    </div>
+
+</div>

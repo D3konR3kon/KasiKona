@@ -1,0 +1,120 @@
+<app-topnav></app-topnav>
+<section class="mb-4 px-4">
+    <app-search></app-search>
+    <app-location></app-location>
+</section>
+<section>
+    <div class="h-44 grid grid-cols-2 w-full bg-blue-100 p-2    shadow ">
+        <div class="h-full flex flex-col space-y-3">
+            <h1 class=" text-2xl font-bold">Discover Local Gems</h1>
+            <p class="">Browse all your go-to spot for nearby shops and deals!</p>
+           
+        </div>
+        <div class="h-full bg-slate-300 border">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSH2AYi8z6mYBgAc1-4rmvgq5LIHy2crSsMdw&s" class="w-full h-full object-cover" alt="">
+        </div>
+        
+
+    </div>
+</section>
+<main class="mb-14">
+    <div class="container p-2 pt-4 bg-slate-50">
+        <div class="">
+            <h1 class="text-lg font-bold uppercase">Explore Our Shops</h1>
+        </div>
+        <div class="grid grid-cols-2 gap-x-8 gap-y-2 p-2">
+            <div class="overflow-hidden rounded-lg h-36 " [routerLink]="'/products'" >
+                <div class="w-full border-2  h-28   rounded-xl overflow-hidden">
+                    <a>
+                        <img class="w-full h-full " src="../../../assets/Shops_images/Checkers_Real.jpeg" alt="" />
+                    </a>
+                </div>
+                
+                <div class="relative py-1 ">
+                    <div class="relative h-5 flex justify-around bg-white border  rounded-md ">
+                        <p class="text-sm font-bold text-center">Checkers</p><span class="text-sm">1.5km</span>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="overflow-hidden rounded-lg h-36">
+                <div class="w-full border-2 inset-5  h-28   rounded-xl overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-full " src="../../../assets/Shops_images/Shoprite_Real.jpeg" alt="" />
+                    </a>
+                </div>
+                
+                <div class="relative py-1 ">
+                    <div class="relative flex h-5 justify-around bg-white border rounded-md ">
+                        <p class="text-sm font-bold text-center">Shoprite</p><span class="text-sm">3.5km</span>
+                    </div>
+        
+                </div>
+            </div>
+           
+            <div class="overflow-hidden rounded-lg h-36">
+                <div class="w-full border-2  h-28   rounded-xl overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-full " src="../../../assets/Shops_images/Boxer_Real.jpeg" alt="" />
+                    </a>
+                </div>
+                
+                <div class="relative py-1 ">
+                    <div class="relative h-5 flex justify-around bg-white border rounded-md  ">
+                        <p class="text-sm font-bold text-center ">Boxer</p><span class="text-sm">1.5km</span>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="overflow-hidden rounded-lg h-36">
+                <div class="w-full border-2  h-28   rounded-xl overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-full " src="../../../assets/Shops_images/Pnp_Real.jpeg" alt="" />
+                    </a>
+                </div>
+                
+                <div class="relative py-1 ">
+                    <div class="relative h-5  ">
+                        <p class="text-sm font-bold text-center w-full bg-white border rounded-md">Pick'n'Pay</p>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="overflow-hidden rounded-lg px-2 h-36">
+                <div class="w-full border-2  inset-2  h-28   rounded-xl overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-full " src="../../../assets/Shops_images/Boxer_store.png" alt="" />
+                    </a>
+                </div>
+                
+                <div class="relative px-2 py-1 ">
+                    <div class="relative h-5  ">
+                        <p class="text-sm font-bold text-center w-full bg-white border rounded-md">Boxer</p>
+                    </div>
+        
+                </div>
+            </div>
+
+            <div class="overflow-hidden rounded-lg px-2  h-36">
+                <div class="w-full border-2  h-28   rounded-xl overflow-hidden">
+                    <a href="#">
+                        <img class="w-full h-full " src="../../../assets/Shops_images/shoprite.png" alt="" />
+                    </a>
+                </div>
+                
+                <div class="relative px-2 py-1 ">
+                    <div class="relative h-5  ">
+                        <p class="text-sm font-bold text-center w-full bg-white border rounded-md">Shoprite</p>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- footer section -->
+ <app-footer-nav></app-footer-nav>
