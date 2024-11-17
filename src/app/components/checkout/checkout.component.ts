@@ -16,10 +16,10 @@ export class CheckoutComponent {
   items: any
   date= new Date()
   customer={
-    name: "Vuyo",
-    last_name: "Dila",
-    contact_no: "067 123 4567",
-    email: "example@gmail.com",
+    name: "Buhle",
+    last_name: "Qampi",
+    contact_no: "066 123 4545",
+    email: "buhle@gmail.com",
     // dob: {  type: Date, require: true},
     // id_number: { type: String, required: true, unique: true, index: true, match: /^[0-9]{13}$/,},
     address: {
